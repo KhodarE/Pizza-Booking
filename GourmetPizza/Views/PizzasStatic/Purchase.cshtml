@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Purchase";
+}
+
+<h2>Purchase</h2>
+
+<h3> You purchased @ViewData["PizzaName"]</h3>
+
+@if ((int)ViewData["PizzaType"] == 1)
+{
+    <img src="~/images/bbq_beef.jpg" />
+}
+else if ((int)ViewData["PizzaType"] == 2)
+{
+    <img src="~/images/chicken_pine.jpg" />
+}
+else if ((int)ViewData["PizzaType"] == 3)
+{
+    <img src="~/images/peppo.jpg" />
+}
+else if ((int)ViewData["PizzaType"] == 4)
+{
+    <img src="~/images/vege.jpg" />
+}
+
+    <h3>Total Price: $@ViewData["total"]</h3>
